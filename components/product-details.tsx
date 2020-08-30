@@ -49,7 +49,7 @@ export default function ProductDetails({ product }: Props): React.ReactElement {
           <p className={styles.price}>
             {formatPrice(product.price, product.currency)}
           </p>
-          <Button label="CLAIM" handleClick={onClaim} />
+          <Button label="CLAIM" onClick={onClaim} />
         </div>
       </div>
     </div>

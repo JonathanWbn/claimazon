@@ -2,15 +2,12 @@ import styles from '../styles/button.module.css'
 
 type Props = {
   label: string
-  handleClick: (event: React.MouseEvent<HTMLButtonElement>) => void
+  onClick: (event: React.MouseEvent<HTMLButtonElement>) => void
 }
 
-export default function Button({
-  label,
-  handleClick,
-}: Props): React.ReactElement {
+export default function Button({ label, onClick }: Props): React.ReactElement {
   return (
-    <button className={styles.button} onClick={handleClick}>
+    <button className={styles.button} onClick={onClick}>
       {label}
     </button>
   )
