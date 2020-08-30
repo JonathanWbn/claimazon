@@ -1,5 +1,15 @@
 {
   "name": "claimazon",
   "repository": "https://github.com/JonathanWbn/claimazon.git",
-  "author": "Jonathan Wieben <jwieben@hey.com>"
+  "author": "Jonathan Wieben <jwieben@hey.com>",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "9.5.2",
+    "react": "16.13.1",
+    "react-dom": "16.13.1"
+  }
 }
