@@ -1,0 +1,11 @@
+.review {
+  overflow: hidden;
+  background-color: var(--background-color);
+  border-radius: 15px;
+  box-shadow: var(--shadow-light);
+  padding: 15px;
+}
+
+.review > *:not(:last-child) {
+  margin-bottom: 10px;
+}

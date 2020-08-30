@@ -2,6 +2,7 @@ import { useRouter } from 'next/router'
 
 import ProductDetails from '../components/product-details'
 import ProductList from '../components/product-list'
+import ReviewList from '../components/review-list'
 import Spinner from '../components/spinner'
 import { useProducts } from '../data-hooks/products'
 
@@ -27,6 +28,12 @@ export default function ProductDetailPage(): React.ReactElement {
         <>
           <h1>Other people also claimed</h1>
           <ProductList products={suggestedProducts} />
+        </>
+      )}
+      {product.reviews.length > 0 && (
+        <>
+          <h1>Reviews</h1>
+          <ReviewList reviews={product.reviews} />
         </>
       )}
     </>
