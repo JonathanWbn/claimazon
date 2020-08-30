@@ -8,9 +8,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 40px;
-  background-color: var(--background-color);
-  box-shadow: 0px 10px 20px -5px var(--background-color);
+  padding: 30px;
+  width: 100vw;
+  max-width: var(--content-max-width);
+  align-self: center;
 }
 
 .header h1 {
@@ -18,9 +19,16 @@
   color: var(--primary-color);
   font-weight: 300;
   letter-spacing: 5px;
+  background-color: var(--background-color);
+  border-radius: 100%;
+  box-shadow: 0px 0px 30px 25px var(--background-color);
 }
 
 .header svg {
+  background-color: var(--background-color);
+  border-radius: 100%;
+  box-shadow: 0px 0px 30px 25px var(--background-color);
+  cursor: pointer;
   fill: var(--secondary-color);
 }
 
@@ -28,20 +36,31 @@
   flex-grow: 1;
   align-self: center;
   padding: 20px;
-  max-width: 1024px;
+  width: 100vw;
+  max-width: var(--content-max-width);
 }
 
 .footer {
-  padding: 20px 40px;
-  background-color: var(--background-color);
+  background-color: var(--footer-background-color);
+  border-top: 1px solid var(--footer-accent-color);
+  box-shadow: 0px -10px 20px -5px var(--background-color);
+  margin-top: 50px;
   display: flex;
   justify-content: center;
-  box-shadow: 0px -10px 20px -5px var(--background-color);
 }
 
-.footer a {
-  color: var(--primary-color);
-  font-weight: 300;
+.footerContent {
+  padding: 30px;
+  width: 100vw;
+  max-width: var(--content-max-width);
+  display: flex;
+  justify-content: center;
+  color: var(--footer-text-color);
+}
+
+.footer p {
+  flex-grow: 1;
+  margin: 0;
 }
 
 .footer a:not(:last-child) {
@@ -55,5 +74,9 @@
 
   .content {
     padding: 10px;
+  }
+
+  .footer p {
+    display: none;
   }
 }

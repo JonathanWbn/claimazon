@@ -8,9 +8,9 @@
 .product {
   display: flex;
   flex-direction: column;
-  width: 300px;
   height: 300px;
   overflow: hidden;
+  background-color: var(--background-color);
   border-radius: 15px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
   cursor: pointer;
@@ -53,7 +53,7 @@
   font-weight: 700;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
   .list {
     grid-template-columns: 1fr 1fr;
     column-gap: 20px;
@@ -61,7 +61,7 @@
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 650px) {
   .list {
     grid-template-columns: 1fr;
     column-gap: 10px;

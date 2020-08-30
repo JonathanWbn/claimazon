@@ -5,6 +5,11 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
+body {
+  background-image: url('/header-background.jpg');
+  background-position: center;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -17,5 +22,9 @@ a {
 :root {
   --primary-color: #f39c56;
   --secondary-color: #715da0;
-  --background-color: #e0eeee;
+  --background-color: #fff;
+  --footer-background-color: #fafafa;
+  --footer-accent-color: #eaeaea;
+  --footer-text-color: #585858;
+  --content-max-width: 1024px;
 }

@@ -9,6 +9,8 @@ export default function ProductList(): React.ReactElement {
 
   if (isLoading) return <p>Loading...</p>
 
+  // TODO: handle no products
+
   return (
     <div className={styles.list}>
       {products.map((product) => (
