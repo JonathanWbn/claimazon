@@ -3,13 +3,13 @@ import Link from 'next/link'
 import { useProducts } from '../data-hooks/products'
 import styles from '../styles/product-list.module.css'
 import { formatPrice } from '../utils'
+import Spinner from './spinner'
 
 export default function ProductList(): React.ReactElement {
   const { products, isLoading } = useProducts()
 
-  if (isLoading) return <p>Loading...</p>
-
-  // TODO: handle no products
+  if (isLoading) return <Spinner />
+  if (!products) return null
 
   return (
     <div className={styles.list}>
