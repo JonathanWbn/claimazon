@@ -1,7 +1,7 @@
 import styles from '../styles/list.module.css'
 
 type Props = {
-  children?: React.ReactNode
+  children: React.ReactNode
 }
 
 export default function List({ children }: Props): React.ReactElement {

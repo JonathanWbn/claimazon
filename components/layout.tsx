@@ -8,7 +8,7 @@ type Props = {
 }
 
 export default function Layout({ children }: Props): React.ReactElement {
-  function onOpenCart() {
+  function handleOpenCart() {
     window.alert(
       'This online shop is still in its beta-phase. You cannot use the cart, yet.'
     )
@@ -20,12 +20,12 @@ export default function Layout({ children }: Props): React.ReactElement {
         <Link href="/">
           <h1>CLAIMAZON</h1>
         </Link>
-        <CartIcon onClick={onOpenCart} />
+        <CartIcon onClick={handleOpenCart} />
       </header>
       <section className={styles.content}>{children}</section>
       <footer className={styles.footer}>
         <div className={styles.footerContent}>
-          <p>Copyright © 2020 Jonathan Wieben. All rights reserved.</p>
+          <p>Copyright © 2020 Jonathan Wieben.</p>
           <a href="https://github.com/jonathanwbn/claimazon" target="blank">
             Source
           </a>

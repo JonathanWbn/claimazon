@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }: Props): React.ReactElement {
   return (
     <>
       <Head>
-        <title>Claimazon</title>
+        <title>{`Claimazon | It's still claim one.`}</title>
         <link rel="icon" href="/claimsforce-thumbnail.png" />
         <link
           href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap"

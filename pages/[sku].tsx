@@ -9,16 +9,15 @@ import { useProducts } from '../data-hooks/products'
 export default function ProductDetailPage(): React.ReactElement {
   const { products, isLoading } = useProducts()
   const router = useRouter()
-  const { sku } = router.query
 
   if (isLoading) return <Spinner />
   if (!products) return null
 
-  const product = products.find((product) => product.sku === sku)
+  const product = products.find(matchesSku(router.query.sku as string))
   if (!product) return <h1>No product found.</h1>
 
   const suggestedProducts = product.recommendations
-    .map((productSku) => products.find((product) => product.sku === productSku))
+    .map((recommendation) => products.find(matchesSku(recommendation)))
     .filter(Boolean)
 
   return (
@@ -38,4 +37,8 @@ export default function ProductDetailPage(): React.ReactElement {
       )}
     </>
   )
+}
+
+function matchesSku(sku: string): (product: Client.Product) => boolean {
+  return (product) => product.sku === sku
 }
