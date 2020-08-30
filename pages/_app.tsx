@@ -19,6 +19,10 @@ function MyApp({ Component, pageProps }: Props): React.ReactElement {
           href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap"
           rel="stylesheet"
         ></link>
+        <link
+          href="https://unpkg.com/spinkit@2.0.1/spinkit.min.css"
+          rel="stylesheet"
+        ></link>
       </Head>
       <Layout>
         <Component {...pageProps} />
