@@ -22,7 +22,7 @@ declare namespace Database {
     itemsInStock: string | number
     rating: number | null
     tags: Tag[]
-    reviews: Review[]
+    reviews?: Review[]
     recommendations?: string[]
   }
 }
