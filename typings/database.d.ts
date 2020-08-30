@@ -17,7 +17,7 @@ declare namespace Database {
     description: string
     thumbnail: string
     image: string
-    price: number
+    price: number // in cents
     currency: string
     itemsInStock: string | number
     rating: number | null

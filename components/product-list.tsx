@@ -35,7 +35,7 @@ function ProductItem({ product }: ProductItemProps) {
           </h2>
           <p className={styles.author}>{product.author}</p>
           <p className={styles.price}>
-            {formatPrice(product.price / 100, product.currency)}
+            {formatPrice(product.price, product.currency)}
           </p>
         </div>
       </div>

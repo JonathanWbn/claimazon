@@ -1,0 +1,7 @@
+.wrapper > svg {
+  fill: var(--primary-color);
+}
+
+.wrapper > svg:not(:last-child) {
+  margin-right: 3px;
+}

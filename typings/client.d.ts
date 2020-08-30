@@ -24,5 +24,8 @@ declare namespace Client {
     tags: Tag[]
     reviews: Review[]
     recommendations: string[]
+    hasTags: boolean
+    isInStock: boolean
+    hasRating: boolean
   }
 }

@@ -22,9 +22,12 @@ a {
 :root {
   --primary-color: #f39c56;
   --secondary-color: #715da0;
+  --secondary-text-color: #585858;
   --background-color: #fff;
   --footer-background-color: #fafafa;
   --footer-accent-color: #eaeaea;
   --footer-text-color: #585858;
   --content-max-width: 1024px;
+  --shadow-light: 0 5px 10px rgba(0, 0, 0, 0.12);
+  --shadow-strong: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
