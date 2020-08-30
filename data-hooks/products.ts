@@ -2,7 +2,7 @@ import { ProductsApiResponse } from '../pages/api/products'
 import { useFetch } from './fetch'
 
 type ProductResponse = {
-  products: Client.Product[] | null
+  products?: Client.Product[]
   isLoading: boolean
 }
 

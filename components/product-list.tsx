@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import { useProducts } from '../data-hooks/products'
 
 export default function ProductList(): React.ReactElement {
@@ -8,7 +10,11 @@ export default function ProductList(): React.ReactElement {
   return (
     <ul>
       {products.map((product) => (
-        <li key={product.sku}>{product.title}</li>
+        <li key={product.sku}>
+          <Link as={`/${product.sku}`} href="/[sku]">
+            <a>{product.title}</a>
+          </Link>
+        </li>
       ))}
     </ul>
   )
