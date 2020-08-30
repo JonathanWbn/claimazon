@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next'
 
 import { fetchProducts } from '../../database'
 
-type ProductsApiResponse = {
+export type ProductsApiResponse = {
   products: {
     product: API.Product[]
   }
