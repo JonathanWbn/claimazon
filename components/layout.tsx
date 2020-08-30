@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import styles from '../styles/layout.module.css'
 
 type Props = {
@@ -5,11 +7,20 @@ type Props = {
 }
 
 export default function Layout({ children }: Props): React.ReactElement {
+  function onOpenCart() {
+    window.alert(
+      'This online shop is still in its beta-phase. You cannot use the cart, yet.'
+    )
+  }
+
   return (
     <div className={styles.wrapper}>
       <header className={styles.header}>
-        <h1>CLAIMAZON</h1>
+        <Link href="/">
+          <h1>CLAIMAZON</h1>
+        </Link>
         <svg
+          onClick={onOpenCart}
           xmlns="http://www.w3.org/2000/svg"
           width="38"
           height="38"
