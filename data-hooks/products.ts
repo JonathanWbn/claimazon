@@ -32,5 +32,6 @@ function parseProduct(product: API.Product): Client.Product {
     hasTags: product.tags.length > 0,
     isInStock: itemsInStock > 0,
     hasRating: typeof product.rating === 'number',
+    recommendations: product.recommendations || [],
   }
 }

@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 
 import ProductDetails from '../components/product-details'
+import ProductList from '../components/product-list'
 import Spinner from '../components/spinner'
 import { useProducts } from '../data-hooks/products'
 
@@ -13,12 +14,21 @@ export default function ProductDetailPage(): React.ReactElement {
   if (!products) return null
 
   const product = products.find((product) => product.sku === sku)
-
   if (!product) return <h1>No product found.</h1>
+
+  const suggestedProducts = product.recommendations
+    .map((productSku) => products.find((product) => product.sku === productSku))
+    .filter(Boolean)
 
   return (
     <>
       <ProductDetails product={product}></ProductDetails>
+      {suggestedProducts.length > 0 && (
+        <>
+          <h1>Other people also claimed</h1>
+          <ProductList products={suggestedProducts} />
+        </>
+      )}
     </>
   )
 }

@@ -1,16 +1,15 @@
 import Link from 'next/link'
 
-import { useProducts } from '../data-hooks/products'
 import styles from '../styles/product-list.module.css'
 import { formatPrice } from '../utils'
-import Spinner from './spinner'
 
-export default function ProductList(): React.ReactElement {
-  const { products, isLoading } = useProducts()
+type ProductListProps = {
+  products: Client.Product[]
+}
 
-  if (isLoading) return <Spinner />
-  if (!products) return null
-
+export default function ProductList({
+  products,
+}: ProductListProps): React.ReactElement {
   return (
     <div className={styles.list}>
       {products.map((product) => (

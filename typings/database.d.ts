@@ -23,6 +23,6 @@ declare namespace Database {
     rating: number | null
     tags: Tag[]
     reviews: Review[]
-    recommendations: string[]
+    recommendations?: string[]
   }
 }

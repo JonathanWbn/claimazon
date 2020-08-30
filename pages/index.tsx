@@ -1,7 +1,11 @@
 import ProductList from '../components/product-list'
+import Spinner from '../components/spinner'
+import { useProducts } from '../data-hooks/products'
 import styles from '../styles/home.module.css'
 
 export default function Home(): React.ReactElement {
+  const { products, isLoading } = useProducts()
+
   return (
     <>
       <header className={styles.header}>
@@ -12,7 +16,8 @@ export default function Home(): React.ReactElement {
           instead of just buying them.
         </p>
       </header>
-      <ProductList />
+      {isLoading && <Spinner />}
+      {products && <ProductList products={products} />}
     </>
   )
 }
